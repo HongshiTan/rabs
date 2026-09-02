@@ -16,7 +16,7 @@ else
 	VPP_LDFLAGS += --kernel_frequency $(FREQ)
 endif
 
-VPP_LDFLAGS += --vivado.param general.maxThreads=${NUM_CORES}  --vivado.impl.jobs ${NUM_CORES} --config ${DEFAULT_CFG}
+VPP_LDFLAGS += --vivado.param general.maxThreads=${NUM_CORES}  --vivado.impl.jobs ${NUM_CORES} --vivado.param noc.enableCompilerHiEffort=1 --vivado.param place.preplaceNoC=1 --config ${DEFAULT_CFG}
 
 
 
